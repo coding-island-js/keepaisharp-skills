@@ -15,21 +15,23 @@ Nothing is designed, written or built until a research file exists that covers A
 URL for every fact and UNVERIFIED on anything not confirmed. The finished work cites that file. If a part is skipped,
 say which and why before building, never after.
 
-1. **The reader.** Who exactly lands on it (every audience, not the first one that comes to mind: a tool for private
-   files serves any business with private files, not only lawyers). Their week, their worries, the words they use,
+1. **The reader.** Who exactly lands on it (every audience, not just the first one that comes to mind: a payroll tool
+   serves every small business with staff, not only restaurants). Their week, their worries, the words they use,
    what makes them act. Evidence: surveys, forums, reviews, job posts, regulations that bind them.
 2. **The goal and how things like it succeed.** For a page: how comparable products/services convert (self-serve
    checkout vs call, pricing display, risk reducers, what happens after you pay). For an email: reply-rate research.
-   For a video: what this format does on each platform. Data first (Baymard, NN/g, CXL, platform studies).
+   For a video: what this format does on each platform. Data first: published usability and conversion research (for example Baymard Institute, Nielsen Norman Group,
+   CXL) and the platforms' own studies.
 3. **Competitors and benchmarks.** 5 to 8 of the best real examples. Screenshot them (phone 390px and desktop), note
    what to learn, not copy.
 4. **The look.** What makes the best ones look premium, measurably (hierarchy, whitespace, type, one accent color,
    eye path). If an older version of the user's own thing existed, screenshot old vs new side by side and name what
    to keep. The user judges look and feel, not only words.
 5. **The facts.** Every claim the work will make, checked at the primary source (test results, live pages, code,
-   the sent folder). Never round up. Never imply clients or revenue that do not exist.
+   messages you actually sent). Never round up. Never imply clients or revenue that do not exist.
 
-Plus, when it is public: SEO/AEO (search terms, what ranks, FAQ/schema).
+Plus, when it is public: SEO and AEO (answer engine optimization: being quoted by AI assistants). Cover search
+   terms, what ranks now, and FAQ / schema markup.
 
 ## Then
 
