@@ -1,6 +1,6 @@
 # KeepAISharp Skills
 
-Free skills that make your AI agent check its homework: prep you for a call, turn the call into a follow-up email, research before it builds, and the real COPPA rules for any product a child might use.
+Free skills for your AI agent. Prep me for a call. Turn my call into a follow-up email. Plus two extras: research before you build, and the COPPA rules for kids' apps.
 
 Each skill is a folder with one `SKILL.md` file of instructions. They follow the open [Agent Skills](https://agentskills.io) format, so they work in Claude Code, OpenAI Codex, Cursor, Gemini CLI, GitHub Copilot and other agents that read `SKILL.md`.
 
