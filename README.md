@@ -25,17 +25,17 @@ The first line works for most agents. The others are each agent's own route.
 
 | Agent | How to install |
 |---|---|
-| Any agent (recommended) | `npx skills add coding-island-js/keepaisharp-skills` (add `-s research-first` for one skill, `-a <agent>` to pick an agent) |
-| Claude Code | `/plugin marketplace add coding-island-js/keepaisharp-skills` then `/plugin install keepaisharp-skills@keepaisharp` |
+| Any agent (recommended) | `npx skills add coding-island-js/keepaisharp-skills` (add `-s research-first` for one skill, `-a <agent>` to pick an agent) (tested) |
+| Claude Code | `/plugin marketplace add coding-island-js/keepaisharp-skills` then `/plugin install keepaisharp-skills@keepaisharp` (tested) |
 | Any agent, through GitHub CLI 2.90 or later | `gh skill install coding-island-js/keepaisharp-skills <skill>` (per docs) |
 | claude.ai | Zip the `skills/<skill>` folder. Then Customize > Skills > + > Create skill > Upload a skill. Code execution must be on. (per docs) |
-| OpenAI Codex | `npx skills add coding-island-js/keepaisharp-skills -a codex`, or copy the folder to `~/.agents/skills/<skill>` (per docs) |
-| Cursor | `npx skills add coding-island-js/keepaisharp-skills -a cursor`, or copy the folder to `.agents/skills/<skill>` (per docs) |
-| Gemini CLI | `gemini skills install https://github.com/coding-island-js/keepaisharp-skills.git --path skills/<skill> --consent` (per docs) |
-| GitHub Copilot | `gh skill install coding-island-js/keepaisharp-skills <skill> --agent github-copilot`, or copy the folder to `.github/skills/<skill>` (per docs) |
+| OpenAI Codex | `npx skills add coding-island-js/keepaisharp-skills -a codex` (tested: lands in `.agents/skills/<skill>`) |
+| Cursor | `npx skills add coding-island-js/keepaisharp-skills -a cursor` (tested: lands in `.agents/skills/<skill>`) |
+| Gemini CLI | `npx skills add coding-island-js/keepaisharp-skills -a gemini-cli` (tested), or `gemini skills install https://github.com/coding-island-js/keepaisharp-skills.git --path skills/<skill> --consent` (per docs) |
+| GitHub Copilot | `npx skills add coding-island-js/keepaisharp-skills -a github-copilot` (tested), or `gh skill install coding-island-js/keepaisharp-skills <skill> --agent github-copilot` (per docs) |
 | By hand | `git clone https://github.com/coding-island-js/keepaisharp-skills` and copy `skills/<skill>` into your agent's skills folder |
 
-"Per docs" means the line comes from that agent's own documentation and has not been tested here yet.
+"Tested" means the line was run on Windows 11 on 2026-11-18 and installed the skills. "Per docs" means the line comes from that tool's own documentation and has not been tested here yet.
 
 ## Examples
 

@@ -19,13 +19,20 @@ Example (Python):
 ```python
 from faster_whisper import WhisperModel
 model = WhisperModel("large-v3", device="auto")   # use "small" on a laptop without a GPU
-segments, _ = model.transcribe("talk.mp4", word_timestamps=True, condition_on_previous_text=False)
+segments, _ = model.transcribe("talk.mp4", word_timestamps=True, condition_on_previous_text=False,
+                              initial_prompt="Hello. Welcome, everyone.")
 with open("words.txt", "w", encoding="utf-8") as f:
     for seg in segments:
         f.write(f"[{seg.start:.2f}-{seg.end:.2f}] {seg.text.strip()}\n")
+        f.write("    " + " ".join(f"{w.word.strip()}@{w.start:.2f}" for w in seg.words) + "\n")
 ```
 
+Each line of `words.txt` is a stretch of speech with its start and end time. Under it is every word with
+the second it starts (`broke.@3.76`). Cut on the word times: a stretch often ends in the middle of a sentence.
+
 `condition_on_previous_text=False` stops the model from repeating the same line over and over on long files.
+On some files it also makes large-v3 drop all punctuation and capitals. The short `initial_prompt`, written
+with normal punctuation, brings them back, and you need the full stops to see where sentences end.
 
 ## Step 2. Pick the clip, hook first
 
@@ -73,14 +80,22 @@ Transcribe the joined clip again (Step 1, on `vertical.mp4`) so the caption time
 short captions, three to five words each, into an `.srt` file:
 
 ```python
-segments, _ = model.transcribe("vertical.mp4", word_timestamps=True, condition_on_previous_text=False)
+segments, _ = model.transcribe("vertical.mp4", word_timestamps=True, condition_on_previous_text=False,
+                              initial_prompt="Hello. Welcome, everyone.")
 words = [w for s in segments for w in s.words]
 t = lambda x: f"{int(x//3600):02}:{int(x%3600//60):02}:{int(x%60):02},{int(x*1000%1000):03}"
+chunks, chunk = [], []
+for w in words:                      # up to 4 words, and a new caption after every full stop
+    chunk.append(w)
+    if len(chunk) == 4 or w.word.strip().endswith((".", "?", "!")):
+        chunks.append(chunk)
+        chunk = []
+if chunk:
+    chunks.append(chunk)
 with open("captions.srt", "w", encoding="utf-8") as f:
-    for i in range(0, len(words), 4):
-        chunk = words[i:i+4]
-        text = "".join(w.word for w in chunk).strip()
-        f.write(f"{i//4+1}\n{t(chunk[0].start)} --> {t(chunk[-1].end)}\n{text}\n\n")
+    for n, c in enumerate(chunks, 1):
+        text = "".join(w.word for w in c).strip()
+        f.write(f"{n}\n{t(c[0].start)} --> {t(c[-1].end)}\n{text}\n\n")
 ```
 
 Fix any misheard names or words in `captions.srt` by hand. Then burn the captions in and set the volume to
@@ -89,6 +104,10 @@ the level the apps expect (about -14 LUFS):
 ```bash
 ffmpeg -i vertical.mp4 -vf "subtitles=captions.srt:force_style='FontSize=16,Bold=1,Outline=2,Alignment=2,MarginV=70'" -af "loudnorm=I=-14:TP=-1.5" -c:v libx264 -crf 18 -c:a aac short.mp4
 ```
+
+Run this from the folder that holds `captions.srt` and use the plain file name. On Windows a full path
+such as `C:\clips\captions.srt` breaks the `subtitles` filter, because ffmpeg reads the colon as the start
+of an option.
 
 Keep captions in the lower middle, clear of the face and of the app's buttons on the right edge.
 
