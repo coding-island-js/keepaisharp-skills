@@ -1,6 +1,6 @@
 # KeepAISharp Skills
 
-Free skills that make your AI agent check its homework before it builds: research first, and the real COPPA rules for any product a child might use.
+Free skills that make your AI agent check its homework: prep you for a call, turn the call into a follow-up email, research before it builds, and the real COPPA rules for any product a child might use.
 
 Each skill is a folder with one `SKILL.md` file of instructions. They follow the open [Agent Skills](https://agentskills.io) format, so they work in Claude Code, OpenAI Codex, Cursor, Gemini CLI, GitHub Copilot and other agents that read `SKILL.md`.
 
@@ -12,6 +12,8 @@ npx skills add coding-island-js/keepaisharp-skills
 
 | Skill | What it does | When your agent uses it |
 |---|---|---|
+| [Prep me for a call](skills/call-prep/SKILL.md) (`call-prep`) | Writes a one-page call sheet you can read on your phone: the opening line, the two things you need from the call, what to say if they pick up or you get voicemail, and every fact checked at its source. | Before any sales, partner, client or intro call, and when you say "prep me for a call". |
+| [Turn my call into a follow-up email](skills/call-follow-up/SKILL.md) (`call-follow-up`) | Transcribes the recording, pulls out who decides, what they have, what they want and the agreed next step, then drafts a short follow-up email and a calendar invite. Uses only what was said, and shows you the draft before anything is sent. | Right after a call, or when you share a call recording or transcript. |
 | [research-first](skills/research-first/SKILL.md) | Stops the agent from designing, writing or building until a research file with a source for every fact covers five parts: the reader, how similar things succeed, competitors, the look, and the facts. | Before any landing page, sales page, email, video, resume or demo, and when you ask "did you do the research?" |
 | [kids-privacy](skills/kids-privacy/SKILL.md) | The rules of COPPA (the US Children's Online Privacy Protection Rule, 16 CFR Part 312, as amended in 2025), each linked to its section, plus a 21-line check for a kids' privacy page. Not legal advice. It gets a page ready for a lawyer's read. | When you build or review a product a child under 13 might use, or mention COPPA, parental consent, kids' sign-up, children's data or data retention for kids. |
 

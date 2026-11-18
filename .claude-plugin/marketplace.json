@@ -4,10 +4,10 @@
   "plugins": [
     {
       "name": "keepaisharp-skills",
-      "description": "Free Agent Skills: research before you build, and COPPA rules for kids' products.",
+      "description": "Free Agent Skills: prep for a call, turn a call into a follow-up email, research before you build, and COPPA rules for kids' products.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/kids-privacy", "./skills/research-first"]
+      "skills": ["./skills/call-prep", "./skills/call-follow-up", "./skills/kids-privacy", "./skills/research-first"]
     }
   ]
 }
