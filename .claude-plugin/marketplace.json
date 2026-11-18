@@ -1,0 +1,13 @@
+{
+  "name": "keepaisharp",
+  "owner": { "name": "Rajan Lakhani" },
+  "plugins": [
+    {
+      "name": "keepaisharp-skills",
+      "description": "Free Agent Skills: research before you build, and COPPA rules for kids' products.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/kids-privacy", "./skills/research-first"]
+    }
+  ]
+}
