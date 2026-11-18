@@ -1,6 +1,6 @@
 # KeepAISharp Skills
 
-Free skills for your AI agent. Prep me for a call. Turn my call into a follow-up email. Plus two extras: research before you build, and the COPPA rules for kids' apps.
+Free skills for your AI agent. Prep me for a call. Turn my call into a follow-up email. Write a cold email that gets a reply. Turn my long video into Shorts. Plus two extras: research before you build, and the COPPA rules for kids' apps.
 
 Each skill is a folder with one `SKILL.md` file of instructions. They follow the open [Agent Skills](https://agentskills.io) format, so they work in Claude Code, OpenAI Codex, Cursor, Gemini CLI, GitHub Copilot and other agents that read `SKILL.md`.
 
@@ -14,6 +14,8 @@ npx skills add coding-island-js/keepaisharp-skills
 |---|---|---|
 | [Prep me for a call](skills/call-prep/SKILL.md) (`call-prep`) | Writes a one-page call sheet you can read on your phone: the opening line, the two things you need from the call, what to say if they pick up or you get voicemail, and every fact checked at its source. | Before any sales, partner, client or intro call, and when you say "prep me for a call". |
 | [Turn my call into a follow-up email](skills/call-follow-up/SKILL.md) (`call-follow-up`) | Transcribes the recording, pulls out who decides, what they have, what they want and the agreed next step, then drafts a short follow-up email and a calendar invite. Uses only what was said, and shows you the draft before anything is sent. | Right after a call, or when you share a call recording or transcript. |
+| [Write a cold email that gets a reply](skills/cold-email/SKILL.md) (`cold-email`) | Writes a 50 to 125 word first email built on one checked fact about the person (their own post, a filing, a news story), one true proof line and one easy ask. Then it reads the email as the buyer, cuts soft words, and shows you the draft before anything is sent. | Before any first email or DM to someone who does not know you, and when you say "write a cold email". |
+| [Turn my long video into Shorts](skills/video-to-shorts/SKILL.md) (`video-to-shorts`) | Finds the strongest line in a long talking video, starts the Short on it, cuts only on whole sentences, makes it vertical (1080x1920) with captions, and checks it start to finish. Uses free tools: faster-whisper and ffmpeg. | When you want Shorts, Reels or TikToks from an interview, talk or webinar, and when you say "make Shorts". |
 | [research-first](skills/research-first/SKILL.md) | Stops the agent from designing, writing or building until a research file with a source for every fact covers five parts: the reader, how similar things succeed, competitors, the look, and the facts. | Before any landing page, sales page, email, video, resume or demo, and when you ask "did you do the research?" |
 | [kids-privacy](skills/kids-privacy/SKILL.md) | The rules of COPPA (the US Children's Online Privacy Protection Rule, 16 CFR Part 312, as amended in 2025), each linked to its section, plus a 21-line check for a kids' privacy page. Not legal advice. It gets a page ready for a lawyer's read. | When you build or review a product a child under 13 might use, or mention COPPA, parental consent, kids' sign-up, children's data or data retention for kids. |
 

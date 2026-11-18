@@ -14,7 +14,7 @@ Collect everything about this person and this deal before writing a word:
 
 - Emails and messages with them, or about them (newest first). Note who said what, and when.
 - Notes from earlier calls, and any file someone sent (a list, a proposal, a price sheet).
-- Their public side: company website, LinkedIn or X profile, recent posts, podcast or talk, job openings.
+- Their public side: company website, LinkedIn or X profile, recent posts, interviews or talks, job openings.
 - The calendar: is a time actually booked? Which time zone are they in?
 
 Write down where each fact came from (the email and its date, or the web page and its link).
